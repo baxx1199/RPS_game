@@ -1,0 +1,81 @@
+@use 'src/styles.sass' as c
+.container_options,
+.option_btn,
+.bg_img
+    display: flex
+    justify-content: center
+    align-items: center
+
+
+.container_options
+    width: 500px
+    flex-direction: row
+    flex-wrap: wrap
+    box-sizing: border-box
+    margin: auto
+    position: relative
+    &::after
+        content: ''
+        background-image: url('../../../images/bg-triangle.svg')
+        width: 500px
+        height: 500px
+        position: absolute
+        top: 20%
+        left: 20%
+        background-repeat: no-repeat
+        z-index: -1
+    .option_btn
+        cursor: pointer
+        width: 200px
+        height: 200px
+        border-radius: 50%
+        margin: 15px 20px
+        transition: transform .3s ease
+        &:hover
+            transform: scale(1.1,1.1)
+        &:active
+            transform: scale(.9,.9)
+        
+        .bg_img
+            background: white
+            width: 140px
+            height: 140px
+            border-radius: 50%
+            box-shadow: inset 0px 3px 3px 2px #ccc
+
+    .rock_btn
+       background: c.$color_rock
+       box-shadow: inset 0px -8px 0px 0px #a53b42
+    .paper_btn
+        background:  c.$color_paper
+        box-shadow: inset 0px -8px 0px 0px #2d48a7
+    .scissors_btn
+         background: c.$color_scissors
+         box-shadow: inset 0px -8px 0px 0px #b38530
+
+
+
+
+@media screen and (max-width:500px)
+    .container_options
+        width: 335px
+        height: 335px
+    
+        &::after
+            content: ''
+            background-image: url('../../../images/bg-triangle.svg')
+            width: 200px
+            height: 200px
+            background-size: contain
+            z-index: -1
+
+        .option_btn
+            width: 134px
+            height: 134px
+            margin: auto
+            .bg_img
+                background: white
+                width: 70%
+                height: 70%
+                
+                

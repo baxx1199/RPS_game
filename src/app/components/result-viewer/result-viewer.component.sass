@@ -1,0 +1,145 @@
+@use 'src/styles.sass' as c
+.container_result,
+.option_btn,
+.bg_img
+    display: flex
+    justify-content: center
+    align-items: center
+
+@keyframes winner
+    0% 
+        transform: scale(1.0,1.0)
+        
+    100% 
+        transform: scale(1.1,1.1)
+    
+.cont
+    width: max-content
+    display: flex
+    flex-direction: column
+    min-height: 500px
+    margin: 10px 50px
+    justify-content: space-around
+    
+    .label
+        width: 100%
+        font-size: 28px
+        color: #f2f2f2
+        text-align: center
+        text-transform: uppercase
+        font-weight: 600
+        letter-spacing: 1.5px
+    .labelWinner
+        font-size: 50px
+        margin-bottom: 20px
+        font-weight: 700
+        letter-spacing: 1px
+        animation: winner 1s infinite alternate-reverse
+
+    .btn_again
+        height: 50px
+        width: 220px
+        border-radius: 10px
+        border: none
+        margin: 0 auto
+        color: c.$Dark_Text
+        text-transform: uppercase
+        letter-spacing: 2px
+        font-weight: 600
+        cursor: pointer
+        transition: color .5 ease
+        &:hover
+            color: #e96262
+        &:active
+             transform: scale(.9,.9)
+            
+        
+.cont_again
+    justify-content: center
+    padding: 30px 0px 10px 0px
+    margin: 0
+    
+.container_result
+    width: 80%
+    flex-direction: row
+    flex-wrap: wrap
+    box-sizing: border-box
+    margin: auto
+    position: relative
+    justify-content: center
+    
+    .option_btn
+        width: 300px
+        height: 300px
+        border-radius: 50%
+        margin: 15px auto
+        transition: transform .3s ease
+        
+        
+        .bg_img
+            background: white
+            width: 230px
+            height: 230px
+            border-radius: 50%
+            box-shadow: inset 0px 3px 3px 2px #ccc
+            img
+                width: 130px
+                height: 130px
+
+    .rock_btn
+        background: c.$color_rock
+        box-shadow: inset 0px -8px 0px 0px #a53b42
+    .paper_btn
+        background:  c.$color_paper
+        box-shadow: inset 0px -8px 0px 0px #2d48a7
+    .scissors_btn
+         background: c.$color_scissors
+         box-shadow: inset 0px -8px 0px 0px #b38530
+    .unknown_btn
+        background: #a5a5a5
+        ox-shadow: inset 0px -8px 0px 0px #9f9f9f
+        color: #ccc
+    .win
+        animation: winner 1s infinite alternate-reverse
+        box-shadow: 0px 0px 0px 80px #bababa06,0px 0px 0px 160px #bababa06,0px 0px 0px 260px #bababa06
+    .lose
+        transform: scale(.9,.9)
+        opacity: .5
+    
+@media screen and (max-width:500px)
+    .cont
+        width: 50%
+        height: auto
+        min-height: fit-content
+        flex-direction: column-reverse
+        margin: 10px 0
+        justify-content: center
+        
+        .label
+            font-size: 18px 
+        .labelWinner
+            font-size: 45px
+ 
+    .cont_again
+        order: 3
+        flex-grow: 1
+        flex-direction: column
+    .container_result
+        width: 100%
+        box-sizing: border-box
+        .option_btn
+            width: 150px
+            height: 150px
+            border-radius: 50%
+            margin: 15px auto
+            transition: transform .3s ease
+
+            .bg_img
+                background: white
+                width: 115px
+                height: 115px
+                border-radius: 50%
+                box-shadow: inset 0px 3px 3px 2px #ccc
+                img
+                    width: 70px
+                    height: 70px

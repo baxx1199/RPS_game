@@ -1,0 +1,63 @@
+@use 'src/styles.sass' as c
+
+.cont_modal_rules
+    
+    .container_rules
+        border-radius: 15px
+        background: #ffffff
+        width: 500px
+        height: 550px
+        text-align: center
+        padding: 20px 10px
+        padding-bottom: 60px
+        margin: auto
+        z-index: 10
+        display: flex
+        flex-direction: column
+        
+        .cont_top_rules
+            width: 90%
+            margin: 0 auto
+            display: flex
+            flex-direction: row
+            font-size: 22px
+            justify-content: space-between
+            color: c.$Dark_Text
+            align-items: flex-end
+            margin-bottom: 60px
+            .iconoX
+                font-size: 36px
+                padding-top: none
+                cursor: pointer
+                height: 37px
+                transition: all .3s ease
+                &:hover
+                    color: #312f47
+                    transform: rotate(90deg)
+            
+        img
+            width: 80%
+            margin: 0 auto
+
+    
+@media screen and(max-width:500px)
+    .cont_modal_rules
+        .container_rules
+            width: 110%
+            height: 100vh
+            margin: 0
+            justify-content: center
+            position: relative
+            .cont_top_rules
+                flex-direction: column
+                justify-content: flex-start
+                align-items: center
+                .iconoX
+                    cursor: pointer
+                    position: absolute
+                    bottom: 30px
+                    &:hover
+                         color: #312f47
+            img
+                width: 90%
+                margin: 60px auto

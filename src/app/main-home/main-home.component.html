@@ -1,0 +1,20 @@
+<div class="container">
+    <div *ngIf="seeRules===true" class="cont">
+        <app-rules-card ></app-rules-card>
+    </div>
+    <div *ngIf="selectedToken===false" >
+        <app-choice-viewer></app-choice-viewer>
+    </div>
+    <!--  -->
+    <div *ngIf="selectedToken===true" >
+        <app-result-viewer></app-result-viewer>
+    </div>
+    
+    
+    <button class="btn_rules" (click)="rulesSee()">Rules</button> 
+    
+    <div class="attribution">
+        Challenge by <a  href="https://www.frontendmentor.io?ref=challenge" class="af" target="_blank">Frontend Mentor</a>. 
+       <span class="sep"></span> Coded by <a  href="https://www.frontendmentor.io?ref=challenge" class="a_me" target="_blank">Baxx11</a>.
+    </div>
+</div>

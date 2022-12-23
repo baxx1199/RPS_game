@@ -1,0 +1,39 @@
+<app-scoreboard  [scoren]="score"></app-scoreboard>
+<div class="container">
+    <div class="container_result">
+        <div class="cont">
+            <h3 class="label">You picked</h3>
+            <div class="option_btn {{tokePlayer.color}}" 
+                [ngClass]="{'win': stringwinner=='player win', 'lose': stringwinner=='machine'}"> 
+    
+                <div class="bg_img">
+                    <img src="{{tokePlayer.img}}" alt="Icon of you selection">
+                </div>
+            </div>
+            
+        </div>
+        <div class="cont cont_again">
+            <h2 class="label labelWinner">{{stringwinner}}</h2>
+            <button 
+                type="button" 
+                name="btnAgain"
+                value="playagain"
+                class="btn_again"
+                (click)="resetGame()"
+                >Play again</button>
+        </div>
+        
+        <div class="cont">
+            <h3 class="label">The house picked</h3>
+            <div class="option_btn {{tokenMachine.color}}" 
+                [ngClass]="{'win': stringwinner=='machine win', 'lose': stringwinner=='player'}" > 
+                <div class="bg_img">
+                    <img src="{{tokenMachine.img}}" alt="Icon of machine selection">
+                </div>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+</div>
