@@ -47,12 +47,11 @@ export class PlayService {
   constructor(private sc:ScoreService) { }
 
   getPlayerOneToken():ITokenplayed{
-   
-    return this.parseTokenToObject( this.playedOne)
+      return this.parseTokenToObject( this.playedOne)
   }
+
   getMachineToken():ITokenplayed{
-    return this.parseTokenToObject( this.machine)
-    
+      return this.parseTokenToObject( this.machine) 
   }
 
   setTokenS(token:number){
@@ -124,6 +123,7 @@ export class PlayService {
             winner='player'
           }
       }
+      
       if(winner==='player'){
         this.score++
         

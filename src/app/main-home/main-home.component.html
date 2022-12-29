@@ -6,15 +6,21 @@
         <app-choice-viewer></app-choice-viewer>
     </div>
     <!--  -->
-    <div *ngIf="selectedToken===true" >
+    <div *ngIf="selectedToken===true" > 
         <app-result-viewer></app-result-viewer>
     </div>
     
     
-    <button class="btn_rules" (click)="rulesSee()">Rules</button> 
+    <button
+        type="button" 
+        name="btnSeeRules"
+        value="seeRules"
+        class="btn_rules" 
+        (click)="rulesSee()"
+        >Rules</button> 
     
     <div class="attribution">
         Challenge by <a  href="https://www.frontendmentor.io?ref=challenge" class="af" target="_blank">Frontend Mentor</a>. 
-       <span class="sep"></span> Coded by <a  href="https://www.frontendmentor.io?ref=challenge" class="a_me" target="_blank">Baxx11</a>.
+       <span class="sep"></span> Coded by <a  href="https://baxx1199.github.io/portafolio/" class="a_me" target="_blank">Baxx11</a>.
     </div>
 </div>

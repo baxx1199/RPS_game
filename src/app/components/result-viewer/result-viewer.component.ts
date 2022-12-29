@@ -43,14 +43,11 @@ export class ResultViewerComponent implements OnInit {
     this.tokenMachine=this.tokens[3]
       const interval= setInterval(()=>{
           this.tokenMachine=this.tokens[Math.floor((Math.random()*(3-0))+0)]
-          console.log(1+this.tokenMachine.color)
-          console.log(this.tokenMachine.name)
           
       },75)
       setTimeout(()=>{
         clearInterval(interval)
         this.tokenMachine=this.ps.getMachineToken()
-        
         this.ps.checkWin()
         this.verificationOfWin()
       },1000)
