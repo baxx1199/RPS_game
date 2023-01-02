@@ -1,13 +1,13 @@
-<div class="container" role="mainContainer">
-    <div *ngIf="seeRules===true" class="cont" role="modalContainer">
-        <app-rules-card role="modalRules" ></app-rules-card>
+<div class="container" >
+    <div *ngIf="seeRules===true" class="cont" >
+        <app-rules-card  ></app-rules-card>
     </div>
-    <div *ngIf="selectedToken===false" role="choiceContainer" >
-        <app-choice-viewer role="choiceComponent"></app-choice-viewer>
+    <div *ngIf="selectedToken===false"  >
+        <app-choice-viewer ></app-choice-viewer>
     </div>
     <!--  -->
-    <div *ngIf="selectedToken===true" role="resultContainer"> 
-        <app-result-viewer role="resultComponent"></app-result-viewer>
+    <div *ngIf="selectedToken===true" > 
+        <app-result-viewer ></app-result-viewer>
     </div>
     
     
@@ -19,7 +19,7 @@
         (click)="rulesSee()"
         >Rules</button> 
     
-    <div class="attribution" role="footerContainer">
+    <div class="attribution" >
         Challenge by <a  href="https://www.frontendmentor.io?ref=challenge" class="af" target="_blank">Frontend Mentor</a>. 
        <span class="sep"></span> Coded by <a  href="https://baxx1199.github.io/portafolio/" class="a_me" target="_blank">Baxx11</a>.
     </div>
