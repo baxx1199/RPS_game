@@ -28,8 +28,7 @@
             "inlineStyleLanguage": "sass",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/images"
+              "src/assets"
             ],
             "styles": [
               "src/styles.sass"
